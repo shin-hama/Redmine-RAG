@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "redmine-rag"
+version = "0.1.0"
+description = ""
+authors = ["shin-hama <htysivista@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+torch = "2.2"
+langchain = "^0.1.16"
+langchain-community = "^0.0.34"
+sentence-transformers = "^2.7.0"
+faiss-cpu = "^1.8.0"
+unstructured = {extras = ["md"], version = "^0.13.6"}
+llama-cpp-python = "^0.2.67"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
