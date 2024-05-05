@@ -1842,6 +1842,20 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"},
+    {file = "python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "python-iso639"
 version = "2024.4.27"
 description = "ISO 639 language codes, names, and other associated information"
@@ -1865,6 +1879,20 @@ files = [
     {file = "python-magic-0.4.27.tar.gz", hash = "sha256:c1ba14b08e4a5f5c31a302b7721239695b2f0f058d125bd5ce1ee36b9d9d3c3b"},
     {file = "python_magic-0.4.27-py2.py3-none-any.whl", hash = "sha256:c212960ad306f700aa0d01e5d7a325d20548ff97eb9920dcd29513174f0294d3"},
 ]
+
+[[package]]
+name = "python-redmine"
+version = "2.5.0"
+description = "Library for communicating with a Redmine project management application"
+optional = false
+python-versions = "<4,>=3.7"
+files = [
+    {file = "python-redmine-2.5.0.tar.gz", hash = "sha256:81bdc529aaf188658e2d07488096c795d03d4e256711bfa3fa3f17b1eecc471b"},
+    {file = "python_redmine-2.5.0-py3-none-any.whl", hash = "sha256:4b9c1dbcf46f96bed963ab48eab432f06c7ae342df9751d04cb54d268e2e8055"},
+]
+
+[package.dependencies]
+requests = ">=2.31.0"
 
 [[package]]
 name = "pyyaml"
@@ -3170,4 +3198,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<3.12"
-content-hash = "f3cdc7bbae72dc0c65ec33a1f97b82406e4aba9e3980c000248183aff786252b"
+content-hash = "825a4977de94e02a0c907bc4107889e2b96cd72969cece42fbb256bea999d1a9"

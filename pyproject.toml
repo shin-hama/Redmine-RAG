@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "redmine-rag"
+name = "redmine_rag"
 version = "0.1.0"
 description = ""
 authors = ["shin-hama <htysivista@gmail.com>"]
@@ -12,8 +12,11 @@ langchain = "^0.1.16"
 langchain-community = "^0.0.34"
 sentence-transformers = "^2.7.0"
 faiss-cpu = "^1.8.0"
-unstructured = {extras = ["md"], version = "^0.13.6"}
+unstructured = { extras = ["md"], version = "^0.13.6" }
 llama-cpp-python = "^0.2.67"
+python-redmine = "^2.5.0"
+python-dotenv = "^1.0.1"
+beautifulsoup4 = "^4.12.3"
 
 
 [build-system]
