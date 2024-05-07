@@ -21,11 +21,9 @@ def get_all_paths() -> Iterator[str]:
         api_key,
     )
 
+    for issue in redmine.all_issues().issues:
+        yield f"{redmine_url}/issues/{issue.id}"
+
 
 if __name__ == "__main__":
-    res = RedmineClient(
-        redmine_url,
-        api_key,
-    )
-
-    print(res.current_user())
+    print([p for p in get_all_paths()])

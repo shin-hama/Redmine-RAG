@@ -1,5 +1,7 @@
 import requests
 
+from .models.Issue import IssuesList
+
 
 class RedmineClient:
     def __init__(self, host, key):
@@ -9,7 +11,10 @@ class RedmineClient:
     def _get(self, url):
         return requests.get(
             url,
-            headers={"X-Redmine-API-key": self.key},
+            headers={
+                "X-Redmine-API-key": self.key,
+                "Content-Type": "application/json",
+            },
             proxies={
                 "http": "",
                 "https": "",
@@ -17,9 +22,11 @@ class RedmineClient:
         )
 
     def all_issues(self):
-        return requests.get(
-            f"{self.host}/users/current.json",
-        ).text
+        return IssuesList(
+            **self._get(
+                f"{self.host}/issues.json",
+            ).json()
+        )
 
     def current_user(self):
         """
