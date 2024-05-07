@@ -17,6 +17,7 @@ llama-cpp-python = "^0.2.67"
 python-redmine = "^2.5.0"
 python-dotenv = "^1.0.1"
 beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
 
 
 [build-system]
