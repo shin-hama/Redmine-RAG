@@ -7,18 +7,27 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
-torch = "2.2"
+torch = { version = "^2.3.0+cu118", source = "torch_cu118" }
 langchain = "^0.1.16"
 langchain-community = "^0.0.34"
 sentence-transformers = "^2.7.0"
 faiss-cpu = "^1.8.0"
 unstructured = { extras = ["md"], version = "^0.13.6" }
-llama-cpp-python = "^0.2.67"
 python-redmine = "^2.5.0"
 python-dotenv = "^1.0.1"
 beautifulsoup4 = "^4.12.3"
 requests = "^2.31.0"
 pydantic = "^2.7.1"
+langchainhub = "^0.1.15"
+accelerate = "^0.30.0"
+auto-gptq = "^0.7.1"
+optimum = "^1.19.1"
+
+
+[[tool.poetry.source]]
+name = "torch_cu118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
 
 
 [build-system]

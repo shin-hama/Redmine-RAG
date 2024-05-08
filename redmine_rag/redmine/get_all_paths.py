@@ -26,4 +26,5 @@ def get_all_paths() -> Iterator[str]:
 
 
 if __name__ == "__main__":
-    print([p for p in get_all_paths()])
+    for p in get_all_paths():
+        print(p)
